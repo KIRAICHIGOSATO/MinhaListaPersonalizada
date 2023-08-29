@@ -1,29 +1,32 @@
-import './App.css';
+//Paulo Castelli//
+import React from 'react';
 
-function App() {
+const MinhaLista = () => {
+  const itens = [
+    { carro: 'Fusca', ano: 1975 },
+    { carro: 'Fusion', ano: 1979 },
+    { carro: 'Passats', ano: 1985 },
+    { carro: 'Opalla', ano: 1997 },
+    { carro: 'Gol', ano: 2005 },
+    { carro: 'Civic', ano: 2007 },
+    { carro: 'Uno', ano: 2010 },
+    { carro: 'Corolla', ano: 2015 },
+    { carro: 'Onix', ano: 2019 },
+    { carro: 'Jeep Renegade', ano: 2023 }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div>
+      <h1>Minha Lista Personalizada</h1>
+      <ul>
+        {itens.map((item, index) => (
+          <li key={index}>
+            {item.carro} - {item.ano}
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
 
-export default App;
+export default MinhaLista;
